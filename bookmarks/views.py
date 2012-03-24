@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-from main_page(request):
+def main_page(request):
 	output = u'''
 		<html>
 			<head><title>%s</title></html>
