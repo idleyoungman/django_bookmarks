@@ -1,5 +1,7 @@
 # Django settings for django_bookmarks project.
 
+import os
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
