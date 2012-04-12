@@ -1,6 +1,10 @@
 import os
 import sys
 
+path = '/srv'
+if path not in sys.path:
+    sys.path.append(path)
+
 os.environ['DJANGO_SETTINGS_MODULE'] = 'django_bookmarks.settings'
 
 import django.core.handlers.wsgi
