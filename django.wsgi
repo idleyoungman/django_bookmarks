@@ -2,7 +2,7 @@ import os
 import sys
 
 for dir in ['/srv', '/srv/django_bookmarks']:
-	sys.path.append(dir)
+    sys.path.append(dir)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'django_bookmarks.settings'
 
