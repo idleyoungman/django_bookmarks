@@ -5,11 +5,17 @@ from django.contrib.auth.models import User
 class Link(models.Model):
     url = models.URLField(unique=True)
 
+    def __unicode__(self):
+        return self.url
+
 
 class Bookmark(models.Model):
     title = models.CharField(max_length=200)
     user = models.ForeignKey(User)
     link = models.ForeignKey(Link)
+
+    def __unicode__(self):
+        return r'%s, %s' % (self.user.username, self.link.url)
 
 
 class Tag(models.Model):
