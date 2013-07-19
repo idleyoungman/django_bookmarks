@@ -1,4 +1,5 @@
 from bookmarks.forms import *
+from bookmarks.models import *
 
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import logout
