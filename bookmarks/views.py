@@ -83,9 +83,10 @@ def bookmark_save_page(request):
             return HttpResponseRedirect(
                 '/user/%s/' % request.user.username
             )
-        else:
-            form = BookmarkSaveForm()
-        variables = RequestContext(request, {
-            'form': form
-        })
-        return render_to_response('bookmark_save.html', variables)
+    else:
+        form = BookmarkSaveForm()
+    variables = RequestContext(request, {
+        'form': form
+    })
+    return render_to_response('bookmark_save.html', variables)
+
