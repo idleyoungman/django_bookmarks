@@ -4,7 +4,6 @@ from bookmarks.models import *
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.contrib.auth import logout
 from django.contrib.auth.models import User
-from django.models import *
 from django.template import Context, RequestContext
 from django.template.loader import get_template
 from django.shortcuts import render_to_response
