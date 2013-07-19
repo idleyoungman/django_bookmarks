@@ -1,6 +1,6 @@
 import os
 from django.conf.urls.defaults import patterns, include, url
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 from bookmarks.views import *
 
 site_media = os.path.join(
@@ -27,8 +27,8 @@ urlpatterns = patterns('',
     (r'^login/$', 'django.contrib.auth.views.login'),
     (r'^logout/$', logout_page),
     (r'^register/$', register_page),
-    (r'^register/success/$', direct_to_template,
-        {'template': 'registration/register_success.html'}),
+    (r'^register/success/$',
+        TemplateView.as_view(template_name='registration/register_success.html')),
     (r'^site_media/(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': site_media}),
 
