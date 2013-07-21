@@ -2,6 +2,7 @@ import re
 from django import forms
 from django.contrib.auth.models import User
 
+# pylint: disable=E1101
 
 class RegistrationForm(forms.Form):
     username = forms.CharField(label=u'Username', max_length=30)
